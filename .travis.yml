@@ -1,0 +1,30 @@
+# используем язык java. Travis CI поддерживает другие языки тоже.
+language: java
+jdk:
+  - openjdk17
+
+services:
+  - postgresql
+
+before_install:
+  - psql -c 'create database cooking;' -U postgres
+
+cache:
+  directories:
+    - $HOME/.m2
+
+# после выполнения сборки запустить скрипт, который будет собирать статистику по JaCoCo
+# Здесь используется сторонний сервис https://codecov.io/
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+# Отправлять уведомление на почту
+notifications:
+  email:
+    recipients:
+
+    on_success: never # default: change
+    on_failure: always # default: always
+env:
+  global:
+    - CODECOV_TOKEN="bfcb2b9a-8e9f-43fe-b0b1-fa85b6c6668c"
