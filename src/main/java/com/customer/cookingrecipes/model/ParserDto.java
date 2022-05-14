@@ -28,7 +28,7 @@ public class ParserDto {
 
         elQuote.forEach(el -> {
             //todo  private ArrayList<String> quoteList; class Storage
-            quoteList.add(el.text());
+//            quoteList.add(el.text());
         });
     }
 }
