@@ -20,8 +20,8 @@ import java.util.ArrayList;
 @Component
 public class Bot extends TelegramLongPollingBot {
     private static final Logger LOGGER = LoggerFactory.getLogger(Bot.class);
-    private static final String BOT_TOKEN = "5342429230:AAGlSP37Q8UxFN57Z02cHO2phgmBsU-KlGA"; //токен выдан телегой
-    private static final String BOT_NAME = "Expressions"; //имя бота
+    private static final String BOT_TOKEN = "****"; //токен выдан телегой
+    private static final String BOT_NAME = "****"; //имя бота
 
     private final Storage storage;
 
