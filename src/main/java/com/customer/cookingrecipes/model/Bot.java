@@ -1,6 +1,10 @@
 package com.customer.cookingrecipes.model;
 
 import com.customer.cookingrecipes.repository.Storage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -13,15 +17,16 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 
+@Component
 public class Bot extends TelegramLongPollingBot {
-
-    private static final String BOT_TOKEN = "todo";
-    private static final String BOT_NAME = "*todo";
+    private static final Logger LOGGER = LoggerFactory.getLogger(Bot.class);
+    private static final String BOT_TOKEN = "5342429230:AAGlSP37Q8UxFN57Z02cHO2phgmBsU-KlGA"; //токен выдан телегой
+    private static final String BOT_NAME = "Expressions"; //имя бота
 
     private final Storage storage;
 
-    public Bot() {
-        this.storage = new Storage();
+    public Bot(Storage storage) {
+        this.storage = storage;
     }
 
     @Override
@@ -61,7 +66,7 @@ public class Bot extends TelegramLongPollingBot {
         String response;
         if (textMsg.equals("/start")) {
             response = "Приветствую, бот знает много цитат. Жми /get, чтобы получить случайную из них";
-        } else if (textMsg.equals("/get")) {
+        } else if (textMsg.equals("/get") || textMsg.equals("Просвяти")) { //туду
             response = storage.getRandQuote();
         } else {
             response = "Сообщение не распознано";
