@@ -3,7 +3,6 @@ package com.customer.cookingrecipes.model;
 import com.customer.cookingrecipes.repository.Storage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -20,7 +19,7 @@ import java.util.ArrayList;
 @Component
 public class Bot extends TelegramLongPollingBot {
     private static final Logger LOGGER = LoggerFactory.getLogger(Bot.class);
-    private static final String BOT_TOKEN = "****"; //токен выдан телегой
+    private static final String BOT_TOKEN = "****"; //токен выдан телеграм
     private static final String BOT_NAME = "****"; //имя бота
 
     private final Storage storage;
@@ -66,7 +65,7 @@ public class Bot extends TelegramLongPollingBot {
         String response;
         if (textMsg.equals("/start")) {
             response = "Приветствую, бот знает много цитат. Жми /get, чтобы получить случайную из них";
-        } else if (textMsg.equals("/get") || textMsg.equals("Просвяти")) { //туду
+        } else if (textMsg.equals("/get") || textMsg.equals("Просвяти")) { //todo
             response = storage.getRandQuote();
         } else {
             response = "Сообщение не распознано";

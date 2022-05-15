@@ -17,3 +17,16 @@ https://t.me/wingedWord_bot
 
 -  парсинг HTML с помощью jsoup
 -  выдача произвольной фразы из общего полученного перечня по запросу пользователя /get
+
+
+Used technologies
+______________________________________________
+
+- Java Core
+- Telegram Bots Api
+- Spring Boot (Data JPA, Web)
+- Maven - Build Tool
+- PostgreSQL (DB)
+- Docker
+- Postman - Test REST API
+- Travis C.I.
