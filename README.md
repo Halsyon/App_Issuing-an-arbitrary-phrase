@@ -1,7 +1,7 @@
 # Winged Word Bot
 
 
-[![Build Status](https://app.travis-ci.com/SlartiBartFast-art/cookingrecipes.svg?branch=master)](https://app.travis-ci.com/SlartiBartFast-art/cookingrecipes)
+[![Build Status](https://app.travis-ci.com/SlartiBartFast-art/Winged-Word-Bot.svg?branch=master)](https://app.travis-ci.com/SlartiBartFast-art/Winged-Word-Bot)
 ![GitHub top language](https://img.shields.io/github/languages/top/SlartiBartFast-art/cookingrecipes?logo=java&logoColor=red)
 ![GitHub last commit](https://img.shields.io/github/last-commit/SlartiBartFast-art/cookingrecipes?logo=github)
 
