@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.customer</groupId>
-    <artifactId>cookingrecipes</artifactId>
+    <artifactId>arbitrary_bot</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>wingedwordbot</name>
-    <description>Project for Spring Boot</description>
+    <description>The Application Bot Issuing an arbitrary phrase</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -97,7 +97,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.customer.cookingrecipes.CookingrecipesApplication</mainClass>
+                            <mainClass>com.customer.botphrase.CookingrecipesApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
