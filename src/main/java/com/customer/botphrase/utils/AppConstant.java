@@ -1,4 +1,4 @@
-package com.customer.cookingrecipes.utils;
+package com.customer.botphrase.utils;
 
 public class AppConstant {
 

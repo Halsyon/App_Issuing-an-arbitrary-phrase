@@ -1,4 +1,4 @@
-package com.customer.cookingrecipes;
+package com.customer.botphrase;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

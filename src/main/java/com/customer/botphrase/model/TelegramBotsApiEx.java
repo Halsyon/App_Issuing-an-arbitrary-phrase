@@ -1,4 +1,4 @@
-package com.customer.cookingrecipes.model;
+package com.customer.botphrase.model;
 
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.TelegramBotsApi;

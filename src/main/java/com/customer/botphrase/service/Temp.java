@@ -1,7 +1,7 @@
-package com.customer.cookingrecipes.service;
+package com.customer.botphrase.service;
 
-import com.customer.cookingrecipes.model.Expression;
-import com.customer.cookingrecipes.utils.AppConstant;
+import com.customer.botphrase.model.Expression;
+import com.customer.botphrase.utils.AppConstant;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

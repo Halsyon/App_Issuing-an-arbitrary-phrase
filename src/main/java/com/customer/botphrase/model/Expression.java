@@ -1,4 +1,4 @@
-package com.customer.cookingrecipes.model;
+package com.customer.botphrase.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

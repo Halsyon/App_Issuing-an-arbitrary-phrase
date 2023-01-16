@@ -1,7 +1,7 @@
-package com.customer.cookingrecipes.repository;
+package com.customer.botphrase.repository;
 
-import com.customer.cookingrecipes.model.Expression;
-import com.customer.cookingrecipes.utils.AppConstant;
+import com.customer.botphrase.model.Expression;
+import com.customer.botphrase.utils.AppConstant;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

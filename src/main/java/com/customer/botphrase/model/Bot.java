@@ -1,6 +1,6 @@
-package com.customer.cookingrecipes.model;
+package com.customer.botphrase.model;
 
-import com.customer.cookingrecipes.repository.Storage;
+import com.customer.botphrase.repository.Storage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
