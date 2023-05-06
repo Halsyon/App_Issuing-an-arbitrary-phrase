@@ -1,4 +1,4 @@
-package com.customer.botphrase.service;
+package com.customer.botphrase.test;
 
 import com.customer.botphrase.model.Expression;
 import com.customer.botphrase.utils.AppConstant;
@@ -10,10 +10,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Temp {
+public class PhraseTest {
 
     public static void main(String[] args) throws IOException {
-        int count = 0;
+        Long count = 0L;
         List<String> lists = new ArrayList<>();
         List<Expression> expressions = new ArrayList<>();
 

@@ -1,10 +1,24 @@
+/*
+Copyright (c) 2016-2023 VMware Inc. or its affiliates, All Rights Reserved.[Halsyon]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+ */
 package com.customer.botphrase.repository;
 
 import com.customer.botphrase.model.Expression;
 import com.customer.botphrase.utils.AppConstant;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -18,20 +32,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Component
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class Storage {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Storage.class);
-    private List<String> lists;
-    private List<Expression> expressions;
+    Logger LOGGER = LoggerFactory.getLogger(Storage.class);
+    List<String> lists = new ArrayList<>();
+    List<Expression> expressions = new ArrayList<>();
 
     @PostConstruct
     private void init() throws IOException {
         LOGGER.info("INIT!");
-        lists = new ArrayList<>();
-        expressions = new ArrayList<>();
         parser(AppConstant.URL_MAIN);
         LOGGER.info("Размер хранилища после парсинга {}", expressions.size());
     }
@@ -56,7 +68,7 @@ public class Storage {
      */
     void parser(String url) throws IOException {
         LOGGER.info("Start!");
-        int count = 0;
+        Long count = 0L;
 
         lists.add(url);
         Document doc = Jsoup.connect(url)
