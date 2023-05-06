@@ -1,0 +1,46 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.txt
+pom.xml
+/src/main/Docker/Dockerfile
+/src/main/Docker/docker-compose.yml
+/src/main/resources/application.yml
+/src/main/resources/application.properties
+/src/main/resources/banner.txt
+/src/main/resources/bootstrap.yml
+/src/main/resources/liquibase-changeLog.xml
+/src/main/resources/db/insert.sql
+/src/main/resources/db/schema.sql
+ToDo.txt
+info.txt
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
